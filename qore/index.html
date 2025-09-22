@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>K4fix - Asistente IA con Múltiples Agentes</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+        content="K4fix es un asistente IA con múltiples agentes especializados para consultas profesionales. Accede a expertise en protección de datos, juntas generales, gestión de actas y más.">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/fonts/fonts.css">
+    <link rel="stylesheet" href="asset/icon/style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/animate.css">
+    <link rel="stylesheet" href="asset/css/odometer.min.css">
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="asset/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/favicon.svg">
+
+</head>
+
+<body class="counter-scroll">
+    <!-- <canvas id="globe"></canvas> -->
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="icon icon-arrow-top"></span>
+    </button>
+
+
+
+    <div id="wrapper">
+        <span class="line_page"></span>
+        <div class="overlay_body"></div>
+        <div class="texture_page">
+            <div class="bg-texture"></div>
+            <div class="temp"></div>
+            <div class="bg-texture"></div>
+        </div>
+
+        <!-- Header -->
+        <header id="header" class="tf-header">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-5 col-lg-3">
+                        <div class="header-left">
+                            <a href="index.html" class="logo-site">
+                                <img src="asset/images/logo/Logo K4Fix_n.png" alt="K4Fix Logo" style="max-height: 80px; height: 80px; width: auto; object-fit: contain;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 d-none d-lg-block">
+                        <nav class="box-navigation">
+                            <ul class="main-nav_menu">
+                                <li class="menu-item">
+                                    <a href="#features" class="tf-btn style-transparent text-body-3 animate-btn scroll-link">
+                                        Agentes
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#howToUse" class="tf-btn style-transparent text-body-3 animate-btn scroll-link">
+                                        Cómo funciona
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#pricing" class="tf-btn style-transparent text-body-3 animate-btn scroll-link">
+                                        Precios
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#FAQs" class="tf-btn style-transparent text-body-3 animate-btn scroll-link">
+                                        Preguntas Frecuentes
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-7 col-lg-3">
+                        <div class="header-right">
+                            <div class="btn_group">
+                                <a href="https://k4fix.com/login" class="tf-btn text-body-3 animate-btn d-none d-sm-flex">
+                                    Acceder
+                                </a>
+                                <a href="https://k4fix.com/register" class="tf-btn text-body-3 style-2 animate-btn animate-dark">
+                                    Probar Chat
+                                </a>
+                                <a href="#mobileMenu" class="btn-menu_mobile d-lg-none" data-bs-toggle="offcanvas">
+                                    <i class="icon icon-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <span class="br-line"></span>
+        <!-- /Header -->
+        <!-- Section Hero -->
+        <section class="section-hero">
+            <!-- Video de fondo movido dentro de la sección Hero -->
+            <div class="hero-video">
+                <video class="" muted autoplay loop playsinline>
+                    <source src="asset/images/video/BlackHole.mp4" type="video/mp4">
+                </video>
+                <div class="orther-overlay"></div>
+            </div>
+            <style>
+                /* Hacer que la sección Hero ocupe más altura */
+                .section-hero {
+                    min-height: 100vh;
+                    position: relative;
+                    overflow: hidden;
+                    background: transparent;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                /* Ajustar el video de fondo manteniendo el ancho máximo original */
+                .hero-video {
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 50% !important;
+                    transform: translateX(-50%) !important;
+                    width: 100% !important;
+                    max-width: 1296px !important; /* Ancho máximo original */
+                    height: 100% !important;
+                    z-index: -1 !important;
+                    overflow: hidden;
+                }
+
+                .hero-video video {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+
+                /* Líneas laterales decorativas como el diseño original */
+                .section-hero::before,
+                .section-hero::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                    z-index: 2;
+                }
+
+                .section-hero::before {
+                    left: calc((100% - 1296px) / 2);
+                }
+
+                .section-hero::after {
+                    right: calc((100% - 1296px) / 2);
+                }
+
+                @media (max-width: 1296px) {
+                    .section-hero::before,
+                    .section-hero::after {
+                        display: none;
+                    }
+                }
+
+                .hero-video .orther-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #5997FF;
+                    mix-blend-mode: hue;
+                    opacity: 0.72;
+                    pointer-events: none;
+                }
+
+                /* Asegurar que el contenido esté sobre el video */
+                .section-hero > * {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                /* Centrar perfectamente el contenido */
+                .section-hero .sect-main {
+                    padding: 80px 20px;
+                }
+
+                .section-hero .sect-title {
+                    padding: 40px 20px;
+                    padding-top: 100px; /* Más espacio superior para bajar todo el conjunto */
+                    text-align: center;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+
+                /* Hacer el título más grande pero adaptable */
+                .section-hero .s-title {
+                    text-align: center !important;
+                    font-size: clamp(2.8rem, 7vw, 6rem); /* Tamaño dinámico aún más grande */
+                    line-height: 1.2; /* Interlineado original */
+                    font-weight: bold;
+                    margin-bottom: 50px; /* Más espacio entre títulos */
+                    display: block;
+                    width: 100%;
+                }
+
+                .section-hero .s-subtitle-text {
+                    text-align: center !important;
+                    font-size: clamp(1.3rem, 2.5vw, 1.8rem) !important; /* Tamaño más grande */
+                    margin-top: 10px !important; /* Espacio después del título principal */
+                    margin-bottom: 15px !important; /* Espacio antes del texto rotativo */
+                    padding: 0 20px;
+                    line-height: 1.4 !important; /* Interlineado normal */
+                    display: block !important;
+                    width: 100% !important;
+                    font-weight: normal !important;
+                }
+
+                /* Ajuste para el texto rotativo */
+                .section-hero .text-change_wrap {
+                    font-size: clamp(0.5em, 1vw, 0.65em) !important; /* Tamaño más pequeño */
+                    display: block !important;
+                    position: relative !important;
+                    height: 1.5em !important;
+                    width: 100% !important;
+                    text-align: center !important;
+                    margin: 0 auto !important;
+                    margin-top: 20px !important; /* Espacio después del subtítulo */
+                    margin-bottom: 100px !important; /* Espacio inferior para alargar la sección */
+                    padding-bottom: 80px !important; /* Padding adicional */
+                }
+
+                .section-hero .text-change_rotating {
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 50% !important;
+                    transform: translateX(-50%) !important;
+                    text-align: center !important;
+                    white-space: nowrap !important;
+                    display: block !important;
+                    font-weight: 600;
+                    text-shadow: 0 0 20px rgba(89, 151, 255, 0.5);
+                }
+
+                /* Hacer los elementos superiores más pequeños para dar más espacio al contenido */
+                .section-hero .sect-header {
+                    padding: 20px 0;
+                    opacity: 0.5;
+                }
+
+                .section-hero .sect-tagline {
+                    padding: 20px 0;
+                    opacity: 0.7;
+                }
+
+                /* Reducir el espacio del sect-bottom */
+                .section-hero .sect-bottom {
+                    display: none;
+                }
+
+                /* Ajustes responsive - solo lo necesario */
+                @media (max-width: 768px) {
+                    .section-hero {
+                        min-height: 100vh; /* Mantener altura completa en móvil */
+                    }
+
+                    .section-hero .sect-main {
+                        padding: 60px 20px; /* Más espacio en móvil para el header */
+                    }
+
+                    .section-hero .sect-title {
+                        padding-top: 60px; /* Menos espacio en móvil pero aún bajado */
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .section-hero .s-sub_title {
+                        font-size: 0.9rem;
+                        padding: 0 10px;
+                    }
+                }
+
+                /* Eliminar espacios entre secciones */
+                .section-hero {
+                    margin-bottom: 0;
+                }
+
+                .section-feature {
+                    margin-top: 0;
+                }
+
+                /* Ocultar líneas divisorias innecesarias */
+                .section-hero > span.br-line:last-child {
+                    display: none;
+                }
+                /* Cambiar todos los puntos a azul principal y redondos */
+                .hafl-plus {
+                    background-color: #5997FF !important;
+                    border-radius: 50% !important;
+                    width: 18px !important;
+                    height: 18px !important;
+                }
+
+                .hafl-plus::before,
+                .hafl-plus::after {
+                    background-color: #5997FF !important;
+                    border-radius: 50% !important;
+                    width: 18px !important;
+                    height: 18px !important;
+                }
+
+                /* Estilizar puntos de fin de frase en azul y redondos */
+                .dot-blue {
+                    display: inline-block;
+                    width: 8px !important;
+                    height: 8px !important;
+                    background-color: #5997FF !important;
+                    border-radius: 50% !important;
+                    margin: 0 3px;
+                    vertical-align: baseline;
+                    position: relative;
+                    bottom: 0;
+                }
+
+                /* Ajustar imágenes de agentes a proporciones consistentes */
+                .image-with-text img {
+                    width: 100% !important;
+                    aspect-ratio: 3148/2100 !important;
+                    object-fit: cover !important;
+                }
+
+                /* Logo responsive */
+                @media (max-width: 768px) {
+                    .logo-site img {
+                        max-height: 50px !important;
+                        height: 50px !important;
+                    }
+                }
+
+                /* Iniciales de testimonios con gradientes */
+                .author-initials {
+                    width: 48px !important;
+                    height: 48px !important;
+                    min-width: 48px !important;
+                    min-height: 48px !important;
+                    max-width: 48px !important;
+                    max-height: 48px !important;
+                    border-radius: 50% !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: white;
+                    text-align: center;
+                    line-height: 48px !important;
+                    flex-shrink: 0 !important;
+                    flex-grow: 0 !important;
+                    aspect-ratio: 1/1 !important;
+                    position: relative;
+                }
+
+                .author_image {
+                    width: 48px !important;
+                    height: 48px !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                }
+
+                .gradient-1 {
+                    background: linear-gradient(135deg, #5997FF 0%, #3366CC 100%);
+                }
+
+                .gradient-2 {
+                    background: linear-gradient(135deg, #6BA3FF 0%, #5997FF 100%);
+                }
+
+                .gradient-3 {
+                    background: linear-gradient(135deg, #4080FF 0%, #5997FF 100%);
+                }
+
+                /* Hacer las FAQ colapsables */
+                .faq-item {
+                    cursor: pointer;
+                    position: relative;
+                    transition: all 0.3s ease;
+                }
+
+                .faq-item .faq_label {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease, padding 0.3s ease;
+                    padding: 0;
+                }
+
+                .faq-item.active .faq_label {
+                    max-height: 200px;
+                    padding-top: 10px;
+                }
+
+                .faq-item .faq_title {
+                    position: relative;
+                    padding-right: 30px;
+                }
+
+                .faq-item .faq_title::after {
+                    content: '+';
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #5997FF;
+                    font-size: 24px;
+                    font-weight: normal;
+                    transition: transform 0.3s ease;
+                }
+
+                .faq-item.active .faq_title::after {
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                /* Cambiar texto blanco a azul en CTA y Footer */
+                .section-cta .s-title {
+                    color: #5997FF !important;
+                    font-weight: bold !important;
+                }
+
+                .section-cta .s-sub_title {
+                    color: #5997FF !important;
+                }
+
+                .section-cta .text-white,
+                .section-cta .odometer {
+                    color: #FFFFFF !important;
+                }
+
+                .section-cta .hacker-text_transform {
+                    color: #FFFFFF !important;
+                }
+
+                /* CTA con fondo negro */
+                .section-cta {
+                    background: #000000 !important;
+                }
+
+                .section-cta .s-img_item {
+                    display: none !important;
+                }
+
+                /* Footer siempre negro */
+                .tf-footer {
+                    background: #000000 !important;
+                }
+
+                .tf-footer .text-white,
+                .tf-footer .odometer,
+                .tf-footer .footer-heading,
+                .tf-footer .link,
+                .tf-footer p,
+                .tf-footer .hacker-text_transform {
+                    color: #FFFFFF !important;
+                }
+            </style>
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="1">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">INICIO</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <p class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                TU ASISTENTE IA CON MÚLTIPLES AGENTES ESPECIALIZADOS
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main">
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h1 class="s-title font-3">
+                            Consulta más inteligente<span class="dot-blue"></span> Resuelve más rápido<span class="dot-blue"></span> <br>
+                            <span class="s-subtitle-text">Chatea con K4fix y accede a múltiples agentes especializados — <br class="d-none d-sm-block">
+                            un asistente IA, expertise infinito<span class="dot-blue"></span></span>
+                            <div class="text-change_wrap">
+                                <div class="text-change_rotating">Agente de Protección de Datos
+                                </div>
+                                <div class="text-change_rotating">Agente de Juntas Generales
+                                </div>
+                                <div class="text-change_rotating">Agente de Gestión de Actas
+                                </div>
+                                <div class="text-change_rotating">Agente Legal General
+                                </div>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+                <span class="br-line"></span>
+                <!-- Formulario de chat comentado - descomentar si se necesita
+                <div class="container">
+                    <div class="sect-content position-relative">
+                        <div class="box-ask-wrap">
+                            <div class="box-ask">
+                                <form class="form-ask wow fadeInUp">
+                                    <div class="form-content">
+                                        <input class="style-2" type="text" placeholder="Escribe tu consulta aquí...">
+
+                                        <fieldset class="field-bottom">
+                                            <div class="field_left">
+                                                <a href="#" class="btn-ip type-circle ip-add">
+                                                    <i class="icon icon-plus"></i>
+                                                </a>
+                                                <a href="#" class="btn-ip ip-modern text-body-3">
+                                                    <i class="icon icon-arrow-circle"></i>
+                                                    GPT-4.1
+                                                    <i class="icon-arrow-caret-down fs-8"></i>
+                                                </a>
+                                            </div>
+                                            <div class="field_right">
+                                                <a href="#" class="btn-ip type-transparent ip-voice">
+                                                    <i class="icon icon-micro"></i>
+                                                </a>
+                                                <button type="submit" class="btn-submit btn-ip type-circle">
+                                                    <i class="icon icon-arrow-top"></i>
+                                                </button>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </form>
+                            </div>
+                            <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                            <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                            <span class="hafl-plus pst-left_top item_top wow bounceInScale"></span>
+                            <span class="hafl-plus pst-right_top item_top wow bounceInScale"></span>
+                        </div>
+                        <span class="line_section"></span>
+
+                    </div>
+                </div>
+                -->
+            </div>
+            <span class="br-line"></span>
+            <!-- == Brand - Sección Trusted By comentada ==
+            <div class="tf-brand">
+                <div class="container">
+                    <div class="tf-brand_inner">
+                        <h5 class="title text-caption font-2 letter-space-0 fw-normal wg-counter wow fadeInUp">TRUSTED
+                            BY <span class="odometer" data-number="6000">1000</span>+ HIGHLY PRODUCTIVE COMPANY</h5>
+                        <div class="infiniteSlide infiniteSlide_brand" data-clone="3">
+                            <div class="image-brand">
+                                <img class="lazyload" src="asset/images/brand/brand-1.png" data-src="asset/images/brand/brand-1.png" alt="Brand">
+                            </div>
+                            <div class="image-brand">
+                                <img class="lazyload" src="asset/images/brand/brand-2.png" data-src="asset/images/brand/brand-2.png" alt="Brand">
+                            </div>
+                            <div class="image-brand">
+                                <img class="lazyload" src="asset/images/brand/brand-3.png" data-src="asset/images/brand/brand-3.png" alt="Brand">
+                            </div>
+                            <div class="image-brand">
+                                <img class="lazyload" src="asset/images/brand/brand-4.png" data-src="asset/images/brand/brand-4.png" alt="Brand">
+                            </div>
+                            <div class="image-brand">
+                                <img class="lazyload" src="asset/images/brand/brand-5.png" data-src="asset/images/brand/brand-5.png" alt="Brand">
+                            </div>
+                            <div class="image-brand">
+                                <img class="lazyload" src="asset/images/brand/brand-6.png" data-src="asset/images/brand/brand-6.png" alt="Brand">
+                            </div>
+                        </div>
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            == Fin de sección Trusted By comentada -->
+            <!-- == Bottom Section (Oculto para reducir espacio) -->
+            <div class="sect-bottom" style="display: none;">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Section Hero -->
+        <!-- Section Feature -->
+        <section class="section-feature" id="features">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="2">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">AGENTES</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <p class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                CUATRO AGENTES<span class="dot-blue"></span> UN CHAT<span class="dot-blue"></span> EXPERTISE INFINITO<span class="dot-blue"></span>
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main flat-animate-tab">
+                <div class="s-img_item wow bounceInScale">
+                    <img class="lazyload" src="asset/images/section/smoke-blue.webp" data-src="asset/images/section/smoke-blue.webp" alt="Item">
+                </div>
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h2 class="s-title font-3">
+                            Lo que puedes hacer con K4fix
+                        </h2>
+                        <p class="s-sub_title">
+                            Desde consultas rápidas hasta análisis complejos, K4fix te ofrece acceso a múltiples especialistas IA <br class="d-none d-lg-block">
+                            — todo desde una sola conversación.
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="imageCreator" role="tabpanel">
+                            <div class="image-with-text">
+                                <img class="lazyload" src="asset/images/a-chosen-soul-mSbTKLCZ4I0-unsplash.jpg" data-src="asset/images/a-chosen-soul-mSbTKLCZ4I0-unsplash.jpg"
+                                    alt="Agente de Gestión de Actas" style="width: 100%; height: auto; object-fit: cover; transform: scaleY(-1);">
+                                <div class="sect-title box-text">
+                                    <h4 class="s-title">Agente de Gestión de Actas</h4>
+                                    <p class="s-sub_title text-body-3">
+                                        Automatiza la documentación de reuniones. Transcribe, resume y genera actas <br class="d-none d-lg-block">
+                                        profesionales con seguimiento de acuerdos y tareas pendientes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="imageEnhance" role="tabpanel">
+                            <div class="image-with-text">
+                                <img class="lazyload" src="asset/images/markus-spiske-iar-afB0QQw-unsplash.jpg" data-src="asset/images/markus-spiske-iar-afB0QQw-unsplash.jpg"
+                                    alt="Agente de Juntas Generales" style="width: 100%; height: auto; object-fit: cover;">
+                                <div class="sect-title box-text">
+                                    <h4 class="s-title">Agente de Juntas Generales</h4>
+                                    <p class="s-sub_title text-body-3">
+                                        Experto en sociedades mercantiles y reuniones corporativas. Gestiona convocatorias, <br class="d-none d-lg-block">
+                                        quórums, votaciones y cumplimiento de estatutos societarios.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="videoCreator" role="tabpanel">
+                            <div class="image-with-text">
+                                <img class="lazyload" src="asset/images/agnte de proteccion de datos.jpg" data-src="asset/images/agnte de proteccion de datos.jpg"
+                                    alt="Agente de Protección de Datos" style="width: 100%; height: auto; object-fit: cover;">
+                                <div class="sect-title box-text">
+                                    <h4 class="s-title">Agente de Protección de Datos</h4>
+                                    <p class="s-sub_title text-body-3">
+                                        Especialista en RGPD y normativa de privacidad. Asesora sobre cumplimiento, <br class="d-none d-lg-block">
+                                        derechos ARCO, brechas de seguridad y auditorías de protección de datos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="textCreator" role="tabpanel">
+                            <div class="image-with-text">
+                                <img class="lazyload" src="asset/images/agente legal general.jpg" data-src="asset/images/agente legal general.jpg"
+                                    alt="Agente Legal General" style="width: 100%; height: auto; object-fit: cover;">
+                                <div class="sect-title box-text">
+                                    <h4 class="s-title">Agente Legal General</h4>
+                                    <p class="s-sub_title text-body-3">
+                                        Consultor jurídico integral. Resuelve dudas sobre contratos, normativas, <br class="d-none d-lg-block">
+                                        compliance y procedimientos legales en múltiples áreas del derecho.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="br-line"></span>
+                <div class="container">
+                    <div class="position-relative">
+                        <ul class="tab-can_do position-relative mx-1" role="tablist">
+                            <li class="nav-tab-item" role="presentation">
+                                <a href="#imageCreator" data-bs-toggle="tab" class="btn_tab tf-btn style-transparent text-body-3 animate-btn active"
+                                    aria-selected="true" role="tab">
+                                    Agente de Gestión de Actas
+                                </a>
+                            </li>
+                            <li class="nav-tab-item" role="presentation">
+                                <a href="#imageEnhance" data-bs-toggle="tab" class="btn_tab tf-btn style-transparent text-body-3 animate-btn"
+                                    aria-selected="true" role="tab">
+                                    Agente de Juntas Generales
+                                </a>
+                            </li>
+                            <li class="nav-tab-item" role="presentation">
+                                <a href="#videoCreator" data-bs-toggle="tab" class="btn_tab tf-btn style-transparent text-body-3 animate-btn"
+                                    aria-selected="true" role="tab">
+                                    Agente de Protección de Datos
+                                </a>
+                            </li>
+                            <li class="nav-tab-item" role="presentation">
+                                <a href="#textCreator" data-bs-toggle="tab" class="btn_tab tf-btn style-transparent text-body-3 animate-btn"
+                                    aria-selected="true" role="tab">
+                                    Agente Legal General
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section Feature -->
+        <!-- Section Benefit -->
+        <section class="section-benefit">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="3">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">BENEFICIOS</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <p class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                POR QUÉ K4FIX FUNCIONA MÁS INTELIGENTE.
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main">
+                <div class="container">
+                    <div class="sect-title wow fadeInUp" style="margin-top: 50px;">
+                            <h2 class="s-title font-3">
+                                Construido para profesionales modernos. <br>
+                                Respaldado por IA especializada.
+                            </h2>
+                            <p class="s-sub_title">
+                                K4fix combina múltiples agentes especializados con una interfaz de chat unificada <br class="d-none d-lg-block">
+                                — construido para precisión, simplicidad y expertise.
+                            </p>
+                    </div>
+                    <div class="position-relative">
+                        <div class="grid-box_icon tf-grid-layout sm-col-2 md-col-3">
+                            <div class="box-icon-text wow fadeInUp">
+                                <div class="icon">
+                                    <img src="asset/images/section/ai-core.svg" alt="Icon">
+                                </div>
+                                <div class="content">
+                                    <p class="title text-main-2">Múltiples agentes especializados</p>
+                                    <p class="sub-title text-body-3">
+                                        Protección de Datos, Juntas Generales, Gestión de Actas, Legal General — K4fix conecta automáticamente con el experto perfecto para tu consulta específica<span class="dot-blue"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="box-icon-text wow fadeInUp">
+                                <div class="icon">
+                                    <img src="asset/images/section/speed.svg" alt="Icon">
+                                </div>
+                                <div class="content">
+                                    <p class="title text-main-2">Disponibilidad que escala</p>
+                                    <p class="sub-title text-body-3">
+                                        Desde la consulta más simple hasta análisis empresariales complejos, K4fix está siempre disponible — 24/7, sin límites, sin esperas<span class="dot-blue"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="box-icon-text wow fadeInUp">
+                                <div class="icon">
+                                    <img src="asset/images/section/secure.svg" alt="Icon">
+                                </div>
+                                <div class="content">
+                                    <p class="title text-main-2">Seguro por diseño</p>
+                                    <p class="sub-title text-body-3">
+                                        Máxima privacidad garantizada<span class="dot-blue"></span> Tus consultas y datos se procesan de forma segura, sin almacenar jamás información confidencial de tus conversaciones<span class="dot-blue"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section Benefit -->
+
+        <!-- Section How To Use -->
+        <section class="section-how-to" id="howToUse">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="4">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">CÓMO USAR K4FIX</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <p class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                CÓMO USAR K4FIX.
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main flat-animate-tab">
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h2 class="s-title font-3 m-0">
+                            Obtén respuestas en 3 simples pasos
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 offset-xl-1 col-xl-4">
+                            <div class="tab-content mb-md-0 sticky-top wow fadeInUp" style="height: 100%; min-height: 500px; position: relative; overflow: visible;">
+                                <div class="tab-pane active show" id="step1" role="tabpanel" style="height: 100%;">
+                                    <div class="image-how_to wow bounceInScale" style="height: 100%; position: relative; overflow: visible;">
+                                        <img class="lazyload" src="asset/images/Captura de pantalla 2025-09-22 105957.png" data-src="asset/images/Captura de pantalla 2025-09-22 105957.png"
+                                            alt="Paso 1 - Abre el chat" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; min-height: 500px;">
+                                        <span class="hafl-plus start-0 top-0 rotate-top_left"></span>
+                                        <span class="hafl-plus end-0 top-0 rotate-top_right"></span>
+                                        <span class="hafl-plus start-0 bottom-0 item_bot rotate-bot_left" style="z-index: 10;"></span>
+                                        <span class="hafl-plus end-0 bottom-0 item_bot rotate-bot_right" style="z-index: 10;"></span>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="step2" role="tabpanel" style="height: 100%;">
+                                    <div class="image-how_to" style="height: 100%; position: relative; overflow: visible;">
+                                        <img class="lazyload" src="asset/images/imagen.png" data-src="asset/images/imagen.png"
+                                            alt="Paso 2 - Escribe tu consulta" style="width: 100%; height: 100%; object-fit: cover; object-position: 61% top; min-height: 500px;">
+                                        <span class="hafl-plus start-0 top-0 rotate-top_left"></span>
+                                        <span class="hafl-plus end-0 top-0 rotate-top_right"></span>
+                                        <span class="hafl-plus start-0 bottom-0 item_bot rotate-bot_left" style="z-index: 10;"></span>
+                                        <span class="hafl-plus end-0 bottom-0 item_bot rotate-bot_right" style="z-index: 10;"></span>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="step3" role="tabpanel" style="height: 100%;">
+                                    <div class="image-how_to" style="height: 100%; position: relative; overflow: visible;">
+                                        <img class="lazyload" src="asset/images/imagen (1).png" data-src="asset/images/imagen (1).png"
+                                            alt="Paso 3 - Recibe respuesta experta" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% top; min-height: 500px;">
+                                        <span class="hafl-plus start-0 top-0 rotate-top_left"></span>
+                                        <span class="hafl-plus end-0 top-0 rotate-top_right"></span>
+                                        <span class="hafl-plus start-0 bottom-0 item_bot rotate-bot_left" style="z-index: 10;"></span>
+                                        <span class="hafl-plus end-0 bottom-0 item_bot rotate-bot_right" style="z-index: 10;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-xl-2 col-xl-4">
+                            <ul class="tab-how_to position-relative mx-1 wow fadeInUp" role="tablist">
+                                <li class="nav-tab-item" role="presentation">
+                                    <div data-bs-toggle="tab" data-bs-target="#step1" class="btn_tab active" aria-selected="true" role="tab">
+                                        <p class="number-step text-caption font-2">PASO 01</p>
+                                        <h5 class="name" data-text="Abre el chat">Abre el chat</h5>
+                                        <p class="desc">
+                                            Inicia conversación con K4fix
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="br-line has-dot"></li>
+                                <li class="nav-tab-item" role="presentation">
+                                    <div data-bs-toggle="tab" data-bs-target="#step2" class="btn_tab" aria-selected="true" role="tab">
+                                        <p class="number-step text-caption font-2">PASO 02</p>
+                                        <h5 class="name" data-text="Escribe tu consulta">Escribe tu consulta</h5>
+                                        <p class="desc">
+                                            Describe tu pregunta o necesidad
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="br-line has-dot"></li>
+                                <li class="nav-tab-item" role="presentation">
+                                    <div data-bs-toggle="tab" data-bs-target="#step3" class="btn_tab" aria-selected="true" role="tab">
+                                        <p class="number-step text-caption font-2">PASO 03</p>
+                                        <h5 class="name" data-text="Recibe respuesta experta">Recibe respuesta experta</h5>
+                                        <p class="desc">
+                                            K4fix conecta con el agente apropiado
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- Botón CTA Chatear con K4fix -->
+                            <div class="mt-5 pt-3 mx-1 text-start wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="https://k4fix.com/login" class="tf-btn style-2 animate-btn animate-dark" style="
+                                    background: transparent;
+                                    color: #5997FF;
+                                    font-size: 1.1rem;
+                                    font-weight: 600;
+                                    border-radius: 50px;
+                                    padding: 16px 40px;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: relative;
+                                    overflow: hidden;
+                                    transition: all 0.3s ease;
+                                    box-shadow: none;
+                                    border: 2px solid #5997FF;
+                                    text-decoration: none;
+                                    line-height: 1.2;
+                                    white-space: nowrap;
+                                    min-height: 52px;
+                                " onmouseover="
+                                    this.style.transform='translateY(-2px)';
+                                    this.style.boxShadow='0 6px 30px rgba(89, 151, 255, 0.5)';
+                                    this.style.background='linear-gradient(90deg, #5997FF 0%, #4080FF 100%)';
+                                    this.style.color='white';
+                                    this.style.border='2px solid transparent';
+                                " onmouseout="
+                                    this.style.transform='translateY(0)';
+                                    this.style.boxShadow='none';
+                                    this.style.background='transparent';
+                                    this.style.color='#5997FF';
+                                    this.style.border='2px solid #5997FF';
+                                ">
+                                    Chatear con K4fix
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative has-hafl_plus">
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section How To Use -->
+        <!-- Section Pricing -->
+        <section class="section-pricing" id="pricing">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="5">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">PRECIOS</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <h6 class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                PLANES PARA CADA PROFESIONAL.
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main">
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h2 class="s-title font-3 m-0">
+                            Precios flexibles que <br>
+                            crecen contigo
+                        </h2>
+                    </div>
+                    <div class="grid-pricing">
+                        <div class="wg-plan wow fadeInUp">
+                            <div class="content">
+                                <div class="plan-header">
+                                    <p class="plan_type text-body-1">
+                                        Plan Individual
+                                    </p>
+                                    <div class="plan_price">
+                                        <h3 class="price-amount">€49</h3>
+                                        <p class="price-duration text-body-3">
+                                            /mes
+                                        </p>
+                                    </div>
+                                    <p class="plan-description">
+                                        Perfecto para profesionales individuales.
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <a href="#" class="tf-btn style-3 style-high animate-btn w-100">
+                                        <span class="text-body-3">
+                                            Comenzar chat gratuito
+                                        </span>
+                                    </a>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                                <div class="plan-feature">
+                                    <p class="feature_title">Qué está incluido</p>
+                                    <ul class="features_list">
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Acceso a todos los agentes
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            100 consultas/mes
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Chat 24/7
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Soporte por email
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="lazyload" src="asset/images/section/color-bg-3.webp" data-src="asset/images/section/color-bg-3.webp"
+                                    alt="BG">
+                            </div>
+                        </div>
+                        <div class="wg-plan type-2 wow fadeInUp">
+                            <div class="content">
+                                <div class="plan-header">
+                                    <p class="plan_type text-body-1">
+                                        Plan Profesional
+                                    </p>
+                                    <div class="plan_price">
+                                        <h3 class="price-amount">€129</h3>
+                                        <p class="price-duration text-body-3">
+                                            /mes
+                                        </p>
+                                    </div>
+                                    <p class="plan-description">
+                                        Para profesionales que necesitan consultas frecuentes.
+                                    </p>
+                                    <a href="#" class="tf-btn style-2 style-high animate-btn w-100">
+                                        <span class="text-body-3">
+                                            Comenzar chat gratuito
+                                        </span>
+                                    </a>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                                <div class="plan-feature">
+                                    <p class="feature_title">Qué está incluido</p>
+                                    <ul class="features_list">
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Consultas ilimitadas
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Respuestas prioritarias
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Análisis detallados
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Soporte prioritario
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="lazyload" src="asset/images/section/color-bg-3.webp" data-src="asset/images/section/color-bg-3.webp"
+                                    alt="BG">
+                            </div>
+                        </div>
+                        <div class="wg-plan wow fadeInUp">
+                            <div class="content">
+                                <div class="plan-header">
+                                    <p class="plan_type text-body-1">
+                                        Plan Empresa
+                                    </p>
+                                    <div class="plan_price">
+                                        <h3 class="price-amount">Precio personalizado</h3>
+                                        <p class="price-duration text-body-3">
+                                            contacto
+                                        </p>
+                                    </div>
+                                    <p class="plan-description">
+                                        Para empresas que requieren solución personalizada.
+                                    </p>
+                                    <a href="#" class="tf-btn style-3 style-high animate-btn w-100">
+                                        <span class="text-body-3">
+                                            Comenzar chat gratuito
+                                        </span>
+                                    </a>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                                <div class="plan-feature">
+                                    <p class="feature_title">Qué está incluido</p>
+                                    <ul class="features_list">
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Agentes personalizados
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Integración API
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            Soporte dedicado
+                                        </li>
+                                        <li>
+                                            <span class="icon">
+                                                <img src="asset/icon/check.svg" alt="ICON">
+                                            </span>
+                                            SLA garantizado
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="lazyload" src="asset/images/section/color-bg-3.webp" data-src="asset/images/section/color-bg-3.webp"
+                                    alt="BG">
+                            </div>
+                        </div>
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section Pricing -->
+        <!-- Section Testimonial -->
+        <section class="section-testimonial">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="6">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">TESTIMONIOS</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <h6 class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                COMENTARIOS REALES DE PROFESIONALES Y EMPRESAS.
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main">
+                <div class="s-img_item wow bounceInScale">
+                    <div class="globe-cont">
+                        <canvas id="cobe" width="700" height="700"></canvas>
+                    </div>
+                    <img class="lazyload img-2" src="asset/images/section/color-bg.webp" data-src="asset/images/section/color-bg.webp" alt="Image">
+                </div>
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h2 class="s-title font-3 m-0">
+                            Resultados que hablan por sí solos
+                        </h2>
+                    </div>
+                    <div class="testimonial-slide-wrap">
+                        <div class="overflow-hidden has-overlay_linear type-2 mx-1">
+                            <div class="infiniteSlide infiniteSlide-tes">
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-1">MG</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">María González</a>
+                                            <p class="text-body-3">Directora Legal, TechCorp</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        K4fix nos permite acceder a diferentes especialistas IA desde un solo chat.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-2">CR</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Carlos Ruiz</a>
+                                            <p class="text-body-3">Consultor de Negocios</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        La versatilidad de K4fix es increíble. Múltiples agentes especializados en una conversación.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-1">MG</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">María González</a>
+                                            <p class="text-body-3">Directora Legal, TechCorp</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        K4fix nos permite acceder a diferentes especialistas IA desde un solo chat.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-3">AL</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Ana López</a>
+                                            <p class="text-body-3">Gerente de Operaciones</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        Como tener un equipo de consultores disponible 24/7.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-3">AL</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Ana López</a>
+                                            <p class="text-body-3">Ana López</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        Como tener un equipo de consultores disponible 24/7.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-1">MG</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">María González</a>
+                                            <p class="text-body-3">Directora Legal, TechCorp</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        K4fix nos permite acceder a diferentes especialistas IA desde un solo chat.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="infiniteSlide infiniteSlide-tes" data-style="right">
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-2">JM</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Juan Martínez</a>
+                                            <p class="text-body-3">CEO, StartupTech</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        La integración de múltiples agentes especializados ha transformado nuestra operación.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-3">LR</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Laura Rodríguez</a>
+                                            <p class="text-body-3">Directora de Compliance</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        El agente de protección de datos nos ahorra horas de consultoría externa.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-1">PS</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Pablo Sánchez</a>
+                                            <p class="text-body-3">Director Financiero</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        Respuestas precisas y contextualizadas. Es como tener un departamento legal completo.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-2">SF</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Sofía Fernández</a>
+                                            <p class="text-body-3">Secretaria del Consejo</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        La gestión de actas nunca fue tan eficiente. K4fix automatiza todo el proceso.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-3">DP</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Diego Pérez</a>
+                                            <p class="text-body-3">Abogado Corporativo</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        K4fix entiende el contexto legal español perfectamente. Una herramienta imprescindible.
+                                    </p>
+                                </div>
+                                <div class="wg-testimonial">
+                                    <div class="tes-author">
+                                        <div class="author_image">
+                                            <div class="author-initials gradient-1">RM</div>
+                                        </div>
+                                        <div class="author_info">
+                                            <a href="#" class="link name">Rosa Morales</a>
+                                            <p class="text-body-3">Directora de RRHH</p>
+                                        </div>
+                                    </div>
+                                    <p class="tes-text">
+                                        Desde consultas laborales hasta protección de datos. Todo en una sola plataforma.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="hafl-plus pst-left_bot item_bot z-1 wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot z-1 wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section Testimonial -->
+        <!-- Section Faq -->
+        <section class="section-faq" id="FAQs">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="7">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">PREGUNTAS FRECUENTES</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <h6 class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                RESPUESTAS A TUS PREGUNTAS FRECUENTES.
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main">
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h2 class="s-title font-3 m-0">
+                            ¿Tienes preguntas? <br>
+                            Tenemos respuestas.
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 offset-lg-1 col-lg-5 offset-xl-2 col-xl-4">
+                            <div class="faq-list">
+                                <div class="faq-item wow fadeInLeft">
+                                    <h3 class="text-body-2 faq_title text-main-2">
+                                        ¿Cómo funciona K4fix?
+                                    </h3>
+                                    <p class="text-body-3 faq_label">
+                                        K4fix es un asistente de IA con múltiples agentes especializados incorporados. Chatea naturalmente y el sistema conecta con el especialista apropiado.
+                                    </p>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                                <div class="faq-item wow fadeInLeft">
+                                    <h3 class="text-body-2 faq_title text-main-2">
+                                        ¿Qué agentes tiene incorporados?
+                                    </h3>
+                                    <p class="text-body-3 faq_label">
+                                        Actualmente incluye agentes en protección de datos, juntas generales, gestión de actas y consultas legales generales.
+                                    </p>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                                <div class="faq-item wow fadeInLeft">
+                                    <h3 class="text-body-2 faq_title text-main-2">
+                                        ¿Cómo sé qué agente me responde?
+                                    </h3>
+                                    <p class="text-body-3 faq_label">
+                                        K4fix identifica automáticamente el agente más apropiado y te indica qué especialista maneja tu consulta.
+                                    </p>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-5 col-xl-4">
+                            <div class="faq-list">
+                                <div class="faq-item wow fadeInRight">
+                                    <h3 class="text-body-2 faq_title text-main-2">
+                                        ¿Las respuestas son confiables?
+                                    </h3>
+                                    <p class="text-body-3 faq_label">
+                                        Cada agente está entrenado con información especializada actualizada. Para decisiones críticas, recomendamos validar con expertos humanos.
+                                    </p>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                                <div class="faq-item wow fadeInRight">
+                                    <h3 class="text-body-2 faq_title text-main-2">
+                                        ¿Puedo usarlo para mi empresa?
+                                    </h3>
+                                    <p class="text-body-3 faq_label">
+                                        Sí, K4fix es ideal para empresas que necesitan acceso rápido a múltiples tipos de expertise especializado.
+                                    </p>
+                                </div>
+                                <span class="br-line has-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative has-hafl_plus">
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section Faq -->
+        <!-- Section CTA -->
+        <section class="section-cta">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="8">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">SOLICITAR DEMO</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Tagline Section -->
+            <div class="sect-tagline">
+                <div class="container">
+                    <div class="sect-tagline_inner">
+                        <span class="hafl-plus pst-left_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot wow bounceInScale"></span>
+                        <h6 class="s-name text-caption font-2">
+                            <span class="bar-group type-left">
+                                <span class="bar_center"></span>
+                            </span>
+                            <span class="hacker-text_transform no-delay">
+                                COMIENZA HOY.
+                            </span>
+                            <span class="bar-group type-right">
+                                <span class="bar_center"></span>
+                            </span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Main Section -->
+            <div class="sect-main position-relative">
+                <div class="s-img_item">
+                    <img class="lazyload" src="asset/images/section/color-bg-2.webp" data-src="asset/images/section/color-bg-2.webp" alt="BG">
+                </div>
+                <div class="container">
+                    <div class="sect-title wow fadeInUp">
+                        <h2 class="s-title font-3">
+                            ¿Listo para Potenciar <br>
+                            tu Productividad?
+                        </h2>
+                        <p class="s-sub_title">
+                            Únete a profesionales que usan K4fix para obtener respuestas expertas más rápido con múltiples agentes especializados.
+                        </p>
+                    </div>
+                    <div class="px-12 px-sm-0">
+                        <div class="sib-form form-get">
+                            <div id="sib-form-container" class="sib-form-container">
+                                <div id="error-message" class="sib-form-message-panel">
+                                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                                            <path
+                                                d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                                        </svg>
+                                        <span class="sib-form-message-panel__inner-text">
+                                            Tu suscripción no pudo ser guardada. Por favor intenta de nuevo.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="success-message" class="sib-form-message-panel">
+                                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                                            <path
+                                                d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                                        </svg>
+                                        <span class="sib-form-message-panel__inner-text">
+                                            Tu suscripción ha sido exitosa.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="sib-container" class="sib-container--large sib-container--vertical">
+                                    <form id="sib-form" method="POST"
+                                        action="https://3c02c1a1.sibforms.com/serve/MUIFABp-6TRH_ZaK3WSmgGEDN5JKtMVuO6AlfuFlAQ5zTnRMTM9BUGeezu_2xii-Q69nQvGvpnGbcxXU67nGQ5uDYgSnl0-UsYaPkTQENX9KjaNOrfvCz8rpEWGmf8Hp7zP5oS_WBIdftR5tby8mzBWr8pGQ7408FpU45UnQz5_Noqye8awDqyH6FqstWhwflIgsFbsd_AHEpMrk"
+                                        data-type="subscription">
+                                        <div style="display: none;">
+                                            <div class="sib-form-block">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div style="display: none;">
+                                            <div class="sib-form-block">
+                                                <div class="sib-text-form-block">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: none;">
+                                            <div class="sib-optin sib-form-block">
+                                                <div class="form__entry entry_mcq">
+                                                    <div class="form__label-row ">
+                                                        <div class="entry__choice">
+                                                            <label>
+                                                                <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" />
+                                                                <span class="checkbox checkbox_tick_positive"></span>
+                                                                <span>
+                                                                    <p></p>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <label class="entry__error entry__error--primary">
+                                                    </label>
+                                                    <label class="entry__specification">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sib-form-inner">
+                                            <div class="sib-input sib-form-block">
+                                                <div class="form__entry entry_block">
+                                                    <div class="form__label-row ">
+                                                        <label class="entry__label" for="EMAIL">
+                                                        </label>
+                                                        <div class="entry__field">
+                                                            <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
+                                                                placeholder="Introduce tu email" data-required="true" required />
+                                                        </div>
+                                                    </div>
+                                                    <label class="entry__error entry__error--primary"></label>
+                                                    <label class="entry__specification">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="sib-form-block">
+                                                <button
+                                                    class="sib-form-block__button sib-form-block__button-with-loader       tf-btn style-2 style-high animate-btn"
+                                                    form="sib-form" type="submit">
+                                                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                                                    </svg>
+                                                    <span>Probar Gratis</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <input type="text" name="email_address_check" value="" class="input--hidden">
+                                        <input type="hidden" name="locale" value="en">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative has-hafl_plus">
+                        <span class="hafl-plus pst-left_bot item_bot wow bounceInScale"></span>
+                        <span class="hafl-plus pst-right_bot item_bot wow bounceInScale"></span>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+            <!-- == Bottom Section -->
+            <div class="sect-bottom">
+                <div class="container">
+                    <div class="box-hacker has-overlay_linear mx-1">
+                        <p class="hacker-text text-caption font-2 text-uppercase hackerText">
+                            qW8bL2nRM4ZpYk5gJfXvCt1uHdEo93NTaVxBYmOe7rPQnKDlcUs0AjzhFiGSwLXtRpUo6NMJvqa7bT2EfyCdx9KWZhgL1nFMR3YUJ5toepXAGvqBzNcdwskLm4iT7OPuVHxayJZErm5QbgCnX1UL2D9ptYfOEK0sWhRAgJmzliNu67BXFoQYPCHtvnwMJeaZKRxdo3TfLUGqc48sbE9NYpJAgmWTVrhXxLFo517zkidC3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+        </section>
+        <!-- /Section CTA -->
+
+        <!-- Footer -->
+        <footer class="tf-footer">
+            <!-- == Head Section -->
+            <div class="sect-header">
+                <div class="container">
+                    <div class="s-meta text-caption font-2">
+                        <p class="s-number_order wg-counter">
+                            [ <span class="text-white">0<span class="odometer" data-number="9">0</span></span> / 09 ]
+                        </p>
+                        <p class="s-label">[ <span class="text-white hacker-text_transform">PIE DE PÁGINA</span> ]</p>
+                    </div>
+                </div>
+            </div>
+            <span class="br-line"></span>
+
+            <div class="footer-body">
+                <div class="container">
+                    <div class="footer-inner-wrap">
+                        <div class="ft-bg_item">
+                            <svg width="373" height="386" viewBox="0 0 373 386" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M-20.3652 -169.377C51.9466 -197.973 130.337 -194.64 201.386 -163.785C231.304 -150.528 258.727 -133.254 282.736 -110.949C325.964 -70.7761 355.318 -17.9054 366.564 40.0342C370.265 59.0818 371.768 77.9351 372.479 97.3115C324.873 97.9552 277.174 97.3313 229.544 97.3271C228.079 63.7031 218.981 32.1199 196.393 6.23145C170.252 -23.7257 132.349 -44.3264 92.4482 -46.8164L92.4463 -46.8174L90.7129 -46.9082C54.3262 -48.5912 18.7081 -35.9096 -8.44531 -11.5557C-37.0303 14.0029 -54.4167 49.7508 -56.9043 87.9697L-57.0107 89.791C-58.2989 113.813 -54.005 142.076 -42.9033 163.783C-37.1848 174.963 -28.8153 185.968 -20.3926 195.226C8.465 226.937 42.7258 240.173 84.667 242.23C85.1421 289.797 84.7639 337.418 84.6768 384.998C46.9504 384.917 10.0955 377.981 -24.6406 363.084L-24.6416 363.083L-26.3154 362.364C-97.0673 331.734 -152.954 274.473 -181.853 202.93C-209.496 132.075 -207.915 53.1455 -177.453 -16.5449L-177.451 -16.5488C-147.535 -86.389 -90.9913 -141.4 -20.3652 -169.377Z"
+                                    stroke="white" stroke-opacity="0.1" />
+                                <path
+                                    d="M228.492 98.3174L228.516 241.184L85.663 241.254L85.706 144.073C85.7042 128.812 85.4327 113.528 85.746 98.29L228.492 98.3174Z"
+                                    stroke="white" stroke-opacity="0.1" />
+                                <path
+                                    d="M372.401 242.25L372.441 384.994L229.428 384.997C230.355 369.412 229.587 353.391 229.583 337.813L229.664 242.22L372.401 242.25Z"
+                                    stroke="white" stroke-opacity="0.1" />
+                            </svg>
+                        </div>
+                        <div class="footer-inner_link tf-grid-layout tf-col-2 lg-col-4">
+                            <a href="index.html" class="footer-logo logo-site">
+                                <img class="lazyload" src="asset/images/logo/Logo K4Fix_n.png" data-src="asset/images/logo/Logo K4Fix_n.png" alt="K4Fix Logo" style="max-height: 80px; height: 80px; width: auto; object-fit: contain;">
+                            </a>
+                            <div class="footer-col-block wow fadeInLeft mx-auto m-sm-0">
+                                <h5 class="footer-heading footer-heading-mobile font-2">Producto</h5>
+                                <div class="tf-collapse-content">
+                                    <ul class="footer-menu-list">
+                                        <li><a href="#" class="link text-main-2">Agentes</a></li>
+                                        <li><a href="#" class="link text-main-2">Beneficios</a></li>
+                                        <li><a href="#" class="link text-main-2">Cómo funciona</a></li>
+                                        <li><a href="#" class="link text-main-2">Precios</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-col-block wow fadeInLeft">
+                                <h5 class="footer-heading footer-heading-mobile font-2">Legales</h5>
+                                <div class="tf-collapse-content">
+                                    <ul class="footer-menu-list">
+                                        <li><a href="#" class="link text-main-2">Política de Privacidad</a></li>
+                                        <li><a href="#" class="link text-main-2">Términos y Condiciones</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="br-line has-dot"></span>
+                        <div class="footer-inner_bottom">
+                            <p class="text-caption font-2">
+                                © 2024 K4fix. Todos los derechos reservados.
+                            </p>
+                            <a href="#" class="text-caption font-2 link">
+                                VOLVER ARRIBA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer -->
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+        <div class="canvas-header">
+            <div class="logo-site">
+                <img class="lazyload" src="asset/images/logo/Logo K4Fix_n.png" data-src="asset/images/logo/Logo K4Fix_n.png" alt="K4Fix Logo" style="max-height: 80px; height: 80px; width: auto; object-fit: contain;">
+            </div>
+            <div class="btn_group">
+                <a href="login.html" class="tf-btn style-2">
+                    Probar Chat
+                </a>
+                <span class="icon-close-popup" data-bs-dismiss="offcanvas">
+                    <i class="icon-close"></i>
+                </span>
+            </div>
+        </div>
+        <span class="br-line"></span>
+        <div class="canvas-body">
+            <ul class="nav-ul-mb">
+                <li class="nav-mb-item" data-bs-dismiss="offcanvas">
+                    <a href="#features" class="mb-item-link scroll-link">
+                        Agentes
+                    </a>
+                </li>
+                <li class="nav-mb-item" data-bs-dismiss="offcanvas">
+                    <a href="#howToUse" class="mb-item-link scroll-link">
+                        Cómo funciona
+                    </a>
+                </li>
+                <li class="nav-mb-item" data-bs-dismiss="offcanvas">
+                    <a href="#pricing" class="mb-item-link scroll-link">
+                        Precios
+                    </a>
+                </li>
+                <li class="nav-mb-item" data-bs-dismiss="offcanvas">
+                    <a href="#FAQs" class="mb-item-link scroll-link">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="canvas-footer">
+            <a href="login.html" class="tf-btn w-100 animate-btn style-high">
+                Acceder
+            </a>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+    <!-- Javascript -->
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script src="asset/js/jquery.min.js"></script>
+    <script src="asset/js/lazysize.min.js"></script>
+    <script src="asset/js/infinityslide.js"></script>
+    <script src="asset/js/gsap.min.js"></script>
+    <script src="asset/js/wow.min.js"></script>
+    <script src="asset/js/ScrollTrigger.min.js"></script>
+    <script src="asset/js/ScrollSmooth.js"></script>
+    <script src="asset/js/odometer.min.js"></script>
+    <script src="asset/js/main.js"></script>
+
+    <!-- Script para FAQ colapsables -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Cerrar otros items abiertos
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle el item clickeado
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+    <script type="module">
+        import createGlobe from "https://cdn.skypack.dev/cobe";
+
+        let phi = 0;
+        let canvas = document.getElementById("cobe");
+
+        const globe = createGlobe(canvas, {
+            devicePixelRatio: 1,
+            width: 700,
+            height: 700,
+            phi: 0,
+            theta: 0,
+            dark: 1,
+            diffuse: 1.2,
+            scale: 1,
+            mapSamples: 16000,
+            mapBrightness: 4,
+            baseColor: [1, 1, 1],
+            markerColor: [0, 0, 0],
+            glowColor: [1, 1, 1],
+            offset: [0, 0],
+            markers: [],
+            onRender: (state) => {
+                state.phi = phi;
+                phi += 0.005;
+            },
+        });
+    </script>
+
+    <script src="asset/js/sibforms.js" defer></script>
+    <script>
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+        window.LOCALE = 'en';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+
+        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected'
+            }
+        };
+
+        var AUTOHIDE = Boolean(0);
+    </script>
+</body>
+
+</html>
