@@ -44,7 +44,6 @@ K4fix is a static HTML landing page for an AI assistant with multiple specialize
 **Editing Files:**
 - Edit HTML directly: `qore/index.html`
 - Edit CSS files: `qore/asset/css/`
-- Edit JavaScript: `qore/asset/js/`
 - All changes are immediate - just refresh the browser
 
 **Asset Handling:**
