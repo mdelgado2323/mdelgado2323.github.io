@@ -28,6 +28,34 @@
     <link rel="shortcut icon" href="asset/images/logo/favicon.svg">
     <link rel="apple-touch-icon-precomposed" href="asset/images/logo/favicon.svg">
 
+    <style>
+        body {
+            background-color: #000000 !important;
+        }
+        html {
+            background-color: #000000 !important;
+        }
+        /* Asegurar que el wrapper sea transparente para mostrar el video */
+        #wrapper {
+            background-color: transparent !important;
+        }
+        /* Logos responsive */
+        .logo-mobile {
+            display: none !important;
+        }
+        .logo-desktop {
+            display: inline-block !important;
+        }
+        @media (max-width: 768px) {
+            .logo-mobile {
+                display: inline-block !important;
+            }
+            .logo-desktop {
+                display: none !important;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="counter-scroll">
@@ -56,7 +84,8 @@
                     <div class="col-5 col-lg-3">
                         <div class="header-left">
                             <a href="index.html" class="logo-site">
-                                <img src="asset/images/logo/Logo K4Fix_n.png" alt="K4Fix Logo" style="max-height: 80px; height: 80px; width: auto; object-fit: contain;">
+                                <img src="asset/images/logo/Logo K4Fix.png" alt="K4Fix Logo" class="logo-desktop" style="max-height: 50px; height: 50px; width: auto; object-fit: contain;">
+                                <img src="asset/images/logo/Logo K4Fix_reducido.png" alt="K4Fix Logo" class="logo-mobile" style="max-height: 50px; height: 50px; width: auto; object-fit: contain; display: none;">
                             </a>
                         </div>
                     </div>
@@ -135,7 +164,7 @@
                     width: 100% !important;
                     max-width: 1296px !important; /* Ancho máximo original */
                     height: 100% !important;
-                    z-index: -1 !important;
+                    z-index: 0 !important;
                     overflow: hidden;
                 }
 
@@ -191,9 +220,9 @@
                 }
 
                 /* Asegurar que el contenido esté sobre el video */
-                .section-hero > * {
+                .section-hero > *:not(.hero-video) {
                     position: relative;
-                    z-index: 1;
+                    z-index: 10 !important;
                 }
 
                 /* Centrar perfectamente el contenido */
@@ -517,9 +546,9 @@
                 <div class="container">
                     <div class="sect-title wow fadeInUp">
                         <h1 class="s-title font-3">
-                            Consulta más inteligente<span class="dot-blue"></span> Resuelve más rápido<span class="dot-blue"></span> <br>
+                            Consulta más inteligente. Resuelve más rápido. <br>
                             <span class="s-subtitle-text">Chatea con K4fix y accede a múltiples agentes especializados — <br class="d-none d-sm-block">
-                            un asistente IA, expertise infinito<span class="dot-blue"></span></span>
+                            un asistente IA, expertise infinito.</span>
                             <div class="text-change_wrap">
                                 <div class="text-change_rotating">Agente de Protección de Datos
                                 </div>
@@ -648,7 +677,7 @@
                                 <span class="bar_center"></span>
                             </span>
                             <span class="hacker-text_transform no-delay">
-                                CUATRO AGENTES<span class="dot-blue"></span> UN CHAT<span class="dot-blue"></span> EXPERTISE INFINITO<span class="dot-blue"></span>
+                                CUATRO AGENTES. UN CHAT. EXPERTISE INFINITO.
                             </span>
                             <span class="bar-group type-right">
                                 <span class="bar_center"></span>
@@ -834,7 +863,7 @@
                                 <div class="content">
                                     <p class="title text-main-2">Múltiples agentes especializados</p>
                                     <p class="sub-title text-body-3">
-                                        Protección de Datos, Juntas Generales, Gestión de Actas, Legal General — K4fix conecta automáticamente con el experto perfecto para tu consulta específica<span class="dot-blue"></span>
+                                        Protección de Datos, Juntas Generales, Gestión de Actas, Legal General — K4fix conecta automáticamente con el experto perfecto para tu consulta específica.
                                     </p>
                                 </div>
                             </div>
@@ -845,7 +874,7 @@
                                 <div class="content">
                                     <p class="title text-main-2">Disponibilidad que escala</p>
                                     <p class="sub-title text-body-3">
-                                        Desde la consulta más simple hasta análisis empresariales complejos, K4fix está siempre disponible — 24/7, sin límites, sin esperas<span class="dot-blue"></span>
+                                        Desde la consulta más simple hasta análisis empresariales complejos, K4fix está siempre disponible — 24/7, sin límites, sin esperas.
                                     </p>
                                 </div>
                             </div>
@@ -856,7 +885,7 @@
                                 <div class="content">
                                     <p class="title text-main-2">Seguro por diseño</p>
                                     <p class="sub-title text-body-3">
-                                        Máxima privacidad garantizada<span class="dot-blue"></span> Tus consultas y datos se procesan de forma segura, sin almacenar jamás información confidencial de tus conversaciones<span class="dot-blue"></span>
+                                        Máxima privacidad garantizada. Tus consultas y datos se procesan de forma segura, sin almacenar jamás información confidencial de tus conversaciones.
                                     </p>
                                 </div>
                             </div>
@@ -1853,7 +1882,8 @@
                         </div>
                         <div class="footer-inner_link tf-grid-layout tf-col-2 lg-col-4">
                             <a href="index.html" class="footer-logo logo-site">
-                                <img class="lazyload" src="asset/images/logo/Logo K4Fix_n.png" data-src="asset/images/logo/Logo K4Fix_n.png" alt="K4Fix Logo" style="max-height: 80px; height: 80px; width: auto; object-fit: contain;">
+                                <img class="lazyload logo-desktop" src="asset/images/logo/Logo K4Fix.png" data-src="asset/images/logo/Logo K4Fix.png" alt="K4Fix Logo" style="max-height: 50px; height: 50px; width: auto; object-fit: contain;">
+                                <img class="lazyload logo-mobile" src="asset/images/logo/Logo K4Fix_reducido.png" data-src="asset/images/logo/Logo K4Fix_reducido.png" alt="K4Fix Logo" style="max-height: 50px; height: 50px; width: auto; object-fit: contain;">
                             </a>
                             <div class="footer-col-block wow fadeInLeft mx-auto m-sm-0">
                                 <h5 class="footer-heading footer-heading-mobile font-2">Producto</h5>
@@ -1896,7 +1926,7 @@
     <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
         <div class="canvas-header">
             <div class="logo-site">
-                <img class="lazyload" src="asset/images/logo/Logo K4Fix_n.png" data-src="asset/images/logo/Logo K4Fix_n.png" alt="K4Fix Logo" style="max-height: 80px; height: 80px; width: auto; object-fit: contain;">
+                <img class="lazyload" src="asset/images/logo/Logo K4Fix_reducido.png" data-src="asset/images/logo/Logo K4Fix_reducido.png" alt="K4Fix Logo" style="max-height: 50px; height: 50px; width: auto; object-fit: contain;">
             </div>
             <div class="btn_group">
                 <a href="login.html" class="tf-btn style-2">
