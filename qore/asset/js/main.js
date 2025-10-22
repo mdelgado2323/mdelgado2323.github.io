@@ -561,7 +561,7 @@
                         toggleActions: "play none none reverse",
                         scrub: true,
                     },
-                    color: "#5997FF",
+                    color: "#8fe3f0",
                     stagger: {
                         each: 0.05,
                         from: "start",

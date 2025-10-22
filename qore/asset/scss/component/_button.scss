@@ -23,6 +23,7 @@
         background-color: var(--primary);
         backdrop-filter: blur(0px);
         border: 1px solid #FFFFFF1A;
+        color: #0f1324;
     }
 
     &.style-3 {
@@ -367,7 +368,7 @@ button.animate-btn::after,
 
     &.active,
     &:hover {
-        background: #1B4EF5;
+        background: #8fe3f0;
         box-shadow: 0px 1px 1px 0px #FFFFFF2E inset,
             0px 0px 4px 0px #FFFFFF0F inset,
             0px 0px 8px 0px #FFFFFF14 inset,
